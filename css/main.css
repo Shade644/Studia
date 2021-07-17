@@ -1,0 +1,909 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Baner */
+nav.baner{
+    background-image: url(../img/laptop.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 725px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.menu{
+    display: flex;
+    width: 100%;
+   
+}
+.menu img {
+    width: 10%;
+   
+}
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    text-decoration: none;
+    list-style-type:none;
+}
+.menu ul li a{
+    margin-top:25px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:black;
+    font-size: 14px;
+}
+
+.menu ul li a:hover {
+    color:rgb(16, 201, 195);
+}
+.hamburger{
+    display: none;
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+
+aside{
+    margin-left: 62%;
+    
+}
+aside h1{
+    font-weight: bold;
+    font-size: 45px;
+    margin-top: 20px;
+
+    
+}
+aside p{
+    display: block;
+    font-size: 20px;
+    font-weight: 100;
+    padding-top:22px;
+    padding-bottom: 100px;
+    width: 80%;
+
+}
+aside a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color:rgb(16, 201, 195) ;
+    text-transform: uppercase;
+    padding: 20px 35px;
+    border: 2px solid rgb(16, 201, 195); 
+    
+
+}
+aside a:hover{
+    border: 2px solid white;
+}
+ /* about us */
+.about {
+    padding: 20px;
+    background-color: white;
+    width: 100%;  
+}
+.about h2 {
+    margin:50px auto 0 auto;
+    font-size: 3.2em;
+    text-align: center;
+   
+}
+.about p {
+    font-size: 1.6em;
+    text-align: center;
+    margin:0 auto;
+    padding-top:20px;
+}
+.about img {
+    margin: 20px auto 50px auto;
+    height:8%;
+    width:8%;
+    display: block;
+}
+/* skills */
+.skills {
+    background-color: rgba(158,158,158,0.21);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.skillsleft{
+    width: 50%;
+    display: flex;
+    flex-direction: column ;
+}
+
+.skillsleft h1{
+    font-size: 30px;
+    margin:150px 0 0 20px ;
+   
+}
+.skillsleft p {
+    font-size: 15px;
+}
+.skillsleft ul{    
+    list-style: none;
+    margin:30px 0 20px 20px ;
+}
+.pasek{
+    display: block;
+    height: 6px;
+    margin:10px 30% 20px 0 ;
+    background-color: rgba(128,128,128,0.41);   
+}
+.pasek span.fi{
+    display: block;
+    background-color: rgba(16, 201, 195);
+    height: 6px;
+    width: 90%;
+}
+.pasek span.sec{
+    display: block;
+   background-color: rgba(16, 201, 195);
+    height: 6px;
+    width: 50%;
+}
+.pasek span.th{
+    display: block;
+    background-color: rgba(16, 201, 195);
+    height: 6px;
+    width: 30%;
+}
+
+.skills img {
+    width: 50%;
+}
+/* project */
+.project{
+    background-color: rgba(16, 201, 195) ;
+    width: 100%;
+    padding:70px 0;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.project div{
+    width: 25%;
+}
+
+.project div p{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+}
+.project div span{
+    display: block;
+    padding-bottom: 8px;
+}
+.project div i {
+    padding:0 20px 0 30px;
+    font-size: 40px;
+    color:white;
+}
+/* products */
+#products {
+    display: flex ;
+    flex-wrap:wrap;
+}
+#products div {
+    width: 25%;
+    overflow: hidden;
+    height : 396px;
+    position: relative;
+}
+#products div img {
+    width: 100%;
+    transition: all .3s;
+
+}
+#products div .bg {
+    position: absolute;
+    top: 0;
+    left:0; 
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0, .75);
+    opacity: 0;
+    transition: all .3s;
+    cursor: pointer;
+}
+#products div .bg i{
+    position: absolute;
+    font-size: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#products div:hover .bg {
+    opacity: 1;
+}
+#products div:hover img {
+    transform: scale(2);
+    
+}
+
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+  }
+  
+  #myImg:hover {opacity: 0.7;
+}
+  
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.8); 
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 30%;
+    max-width: 700px;
+    padding: 70px;
+  }
+  
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+
+    text-align: center;
+    color: white;
+    font-size: 45px;
+ 
+  }
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+.more{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(128,128,128,0.41);
+    color: white;
+}
+.more p{
+    position: absolute;
+    text-transform: uppercase;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 15px;
+    cursor: pointer;
+}
+.more p a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.more p a:hover{
+    color:rgb(16, 201, 195);
+}
+/* video */
+.video div{
+  display: flex;
+  flex-direction: column;
+}
+.video div h1{
+    align-self:center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 60px;
+}
+   .video div p {
+    align-self:center; 
+    font-weight: lighter;
+    font-size: 16px;
+    width: 32%;
+    margin-top:20px; 
+     margin-bottom: 30px;
+}
+   .video .videoo {
+    align-self:center;
+    display: block;
+    height: 540px;
+    width: 960px;
+    margin-bottom: 60px;
+  }
+  .video  .container {
+    position: relative;
+  }
+  .video .container .control{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+  }
+ .control i {
+    font-size: 5rem;
+    color: #34e5eb;
+    outline: none;
+  }
+/* information */
+.information{
+    background-color:rgba(128,128,128,0.41);
+    width: 100%;
+    padding:70px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.information div{
+    width: 25%;
+    text-align: center;
+}
+
+.information div p{
+    display: inline-block;
+    font-weight: normal;
+    font-size: 15px;
+    width: 80%;
+    text-transform: uppercase;
+    color: white;
+}
+.information div p span{
+    display: block;
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+.information div i {
+    padding:10px 20px 10px 30px;
+    font-size: 35px;
+    color:white;
+}
+/* slider */
+
+.slider {
+    position: sticky;
+    display: block;
+    width: 100%;
+    height: 50vh;
+     background-color: rgba(16, 201, 195);
+    color: white;
+    overflow: hidden;
+   }
+ 
+   .slider div {
+    position: absolute;
+    top:50%;
+    width: 80%;
+    left:0;
+    text-align: center;
+    transform: translate(15%,-50%);
+    animation: text 15s linear infinite both;
+   }
+   .slider div h1{
+    font-size: 20px;
+   }
+
+   .slider div h1 span{
+        position: static;
+        display: block;
+       font-size: 12px;
+       top:80%;
+       width: 60%;
+       left:0;
+       text-align: center;
+       transform: translate(35%,125%);
+
+   }
+   .slider div:nth-child(2) {
+       animation-delay:5s;
+   }
+   .slider div:nth-child(3){
+       animation-delay:10s;
+   }
+   
+   @keyframes text {
+    0%{
+        transform: translate(200%,-50%);
+    }
+    3%{
+      transform: translate(200%,-50%);
+    }
+    6%{
+      transform: translate(15%,-50%);
+    }
+    30%{
+      transform: translate(15%,-50%);
+    }
+    33%{
+      transform: translate(-100%,-50%);
+    }
+    100%{
+      transform: translate(-100%,-50%);
+    }
+}
+  
+  
+
+/* ad */
+
+.ad{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;   
+}
+.ad a{
+    width: 20%;
+    text-align: center;
+}
+.ad img{
+    height: 10vh;
+   
+}
+
+/* question */
+.question {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(128,128,128,0.41);
+    padding: 25px;
+    }
+    .question h1{
+        align-self:center;
+        font-size: 35px;
+        margin-top: 60px;
+    }
+    .question p {
+        align-self:center; 
+        width: 35%;
+        font-size: 14px;
+        margin-top:20px; 
+        padding-left: 15px;
+        margin-bottom: 30px;
+    }
+  .inputs{
+    align-self: center;
+   } 
+   .inputs input{
+    height: 35px;
+    margin-bottom: 10px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+   }
+   .inputs .title{
+       width: 100%;
+   }
+  
+  .inputs button{
+    display: block;
+    margin: 0 auto;
+    margin-top:25px;
+    margin-bottom:25px;
+    color: white;
+    font-weight: bold;
+    background-color:rgb(16, 201, 195);
+    border: 2px solid rgb(16, 201, 195);  
+    text-transform: uppercase;
+    padding: 20px 35px;
+    cursor: pointer;
+  }
+  .inputs button:hover{
+    border: 2px solid white;  
+  }
+  /* footer */
+  footer{
+    display: flex;
+    justify-content: space-around;
+      background-color: black;
+      color: white;
+      padding: 40px 20px;
+     
+  }
+  footer .inc{
+      font-size: 18px; 
+      align-self: center;     
+  }
+  footer .inc p:nth-child(1){
+      font-weight: bold;
+  }
+  footer .contact{
+      font-size: 18px;
+      align-self: center; 
+  }
+  footer .pages{
+      font-size: 18px;
+      align-self: center; 
+  }
+  footer .pages ul {
+      list-style: none;
+  }
+  footer .pages ul li a{
+    text-decoration: none;
+    color: white;
+}
+footer .pages ul li a:hover{
+    color:rgb(16, 201, 195);
+}
+
+@media (max-width:767px){
+  
+    
+    .menu ul{
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items:center ;
+        background-color: rgba(0,0,0, .75);
+        padding-bottom: 15px;   
+        width: 100%;     
+    }
+    .menu ul li a{
+        color: white;
+    }
+    ul.show{
+        display: flex;
+        
+        
+    }
+    .menu img {
+        display: none;
+    }
+   
+    .hamburger{
+        height: 15px;
+        width: 15px;
+       position: relative;
+       z-index: 1;
+        padding-left: 15px;
+        padding-top: 10px;
+        display: block;
+    }
+    .hamburger i {
+        font-size: 30px;
+    }
+   
+    aside{
+        margin-left: 10px;
+        margin-bottom: 200px;
+    }
+    aside h1{
+        font-weight: bold;
+        font-size: 25px;
+    
+        
+    }
+    aside p{
+        font-size: 17px;
+        width: 100%;
+    }
+    aside a{
+       margin-left: 50%;
+    }
+    .about img {
+        width: 25%;
+        height: 25%;
+    }
+    .skillsleft h1{
+        font-size: 20px;
+        margin:30px 0 0 20px ;
+    }
+    .skillsleft p{
+        font-size: 10px;
+    }
+  
+    .project{
+        flex-wrap: wrap;
+        flex-direction: unset;
+        padding:25px 0;
+    }
+    .project div{
+        width: 50%;
+    }
+    .project div p {
+        font-size: 10px;
+        width: 70%;
+        margin-bottom: 12px;
+        margin-left:7px;
+    }
+    .project div span{
+        font-size: 12px;
+    }
+    .project div i{
+        padding:10px 20px 10px 30px;
+        font-size: 20px;
+    }
+    #products div{
+        height: 75px;
+    }
+    .modal-content {
+        width: 80%;
+      }
+      
+      #caption {
+      width: 80%;
+        font-size: 25px;
+      }
+    .video div h1{
+        align-self:center;
+        font-size: 32px;
+        margin-top: 10px;
+    }
+    .video div p {
+        width: 80%;
+    }
+    .video .videoo{
+        align-self:center;
+        height: 175px;
+        width: 255px;
+        margin-bottom: 25px;
+    
+    }
+    .information{
+        padding:25px 0;
+    }
+    .information div{
+        width: 50%;
+    }
+    .information div span{
+        font-size: 12px;
+    }
+    .information div p{
+        font-size: 10px;
+        width: 70%;
+        margin-bottom: 12px;
+    }
+    .information div i {
+        font-size: 20px;
+    }
+    .question p {
+        width: 80%;
+    }
+   .inputs input{
+        width: 100%;
+   } 
+   .slider div h1{
+    font-size: 15px;
+   }
+   .ad img{
+    height: 6vh;
+   
+}
+   footer{
+    flex-direction: column;
+    padding: 20px;
+  }
+  footer .inc{
+      font-size: 15px;
+      margin: 5px;
+  }
+  footer .contact{
+      font-size: 14px;
+      margin: 5px;
+  }
+  footer .pages{
+      font-size: 14px;
+      margin: 5px;
+  }
+}
+@media (max-width:767px) and (orientation:landscape){
+    
+    #products div{
+        height: 120px;
+    }
+    .video .videoo{
+        height: 270px;
+        width: 495px;
+        margin-bottom: 25px;
+    
+    }
+    .modal-content {
+        width: 50%;
+      }
+      
+   footer .inc{
+        font-size: 13px;
+    }
+}
+
+@media (max-width:1025px) and (min-width:768px){
+    .menu ul{
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items:center ;
+        background-color: rgba(0,0,0, .75);
+        padding-bottom: 15px;   
+        width: 100%;     
+    }
+    .menu ul li a{
+        color: white;
+        font-size: 40px;
+    }
+    ul.show{
+        display: flex;
+    }
+    .menu img {
+        display: none;
+    }
+   
+    .hamburger{
+        height: 15px;
+        width: 15px;
+       position: relative;
+       z-index: 1;
+        padding-left: 15px;
+        padding-top: 10px;
+        display: block;
+    }
+    .hamburger i {
+        font-size: 50px;
+    }
+    aside h1{
+        font-weight: bold;
+        font-size: 45px;  
+    }
+    aside p{
+        font-size:25px;
+        width: 100%;
+    }
+    aside a{
+       font-size: 20px;
+       padding: 20px 35px;
+    }
+    .about h2{
+        font-size: 50px;
+    }
+    .about p{
+        font-size: 25px;
+    }
+    .about img {
+        width: 25%;
+        height: 25%;
+    }
+    .skillsleft h1{
+        font-size: 40px;
+        margin:30px 0 0 20px ;
+    }
+    .skillsleft p{
+        font-size: 25px;
+    }
+    .project div p {
+        font-size: 25px;
+        width: 70%;
+        margin-bottom: 12px;
+        margin-left:7px;
+    }
+    .project div span{
+        font-size: 25px;
+    }
+    .project div i{
+        padding:10px 20px 10px 30px;
+        font-size: 28px;
+    }
+    #products div{
+        height: 180px;
+    }
+    .modal-content {
+        width: 80%;
+      }
+    
+    .more p{
+        font-size: 25px;
+    }
+    .video div h1{
+        align-self:center;
+        font-size: 52px;
+        margin-top: 10px;
+    }
+    .video div p {
+        font-size: 25px;
+        width: 80%;
+    }
+    .video .videoo{
+        height: 370px;
+        width: 595px;
+        margin-bottom: 25px;
+    
+    }
+    .slider div h1{
+        font-size: 35px;
+       }
+    .ad img{
+        height: 8vh;
+       
+    }
+    .information{
+        padding:25px 0;
+    }
+    .information div{
+        width: 50%;
+    }
+    .information div span{
+        font-size: 24px;
+    }
+    .information div p{
+        font-size: 18px;
+        width: 70%;
+        margin-bottom: 12px;
+    }
+    .information div i {
+   padding:10px 50px 10px 50px;       
+    font-size: 35px;
+    }
+    .question h1{
+        font-size: 55px;
+    }
+    .question p {
+        width: 80%;
+        font-size: 20px;
+    }
+   .inputs input{
+        width: 100%;
+        font-size: 25px;
+   } 
+   .inputs button{
+       font-size: 20px;
+   }
+ 
+  footer .inc{
+      font-size: 20px;
+  }
+  footer .contact{
+      font-size: 20px;
+
+  }
+  footer .pages{
+      font-size: 20px;
+  }
+}
+  
+   
